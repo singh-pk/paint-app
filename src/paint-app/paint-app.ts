@@ -183,14 +183,16 @@ export function paintApp({ canvas }: PaintAppProps) {
 
     const newCanvas = document.createElement('canvas');
 
-    const { width, height, top, left } = canvas.getBoundingClientRect();
+    const { top, left, right, bottom } = canvas.getBoundingClientRect();
 
-    newCanvas.width = width;
-    newCanvas.height = height;
+    newCanvas.width = canvas.width / scale;
+    newCanvas.height = canvas.height / scale;
 
     newCanvas.style.position = 'absolute';
     newCanvas.style.top = convertStringToPx(top);
     newCanvas.style.left = convertStringToPx(left);
+    newCanvas.style.right = convertStringToPx(right);
+    newCanvas.style.bottom = convertStringToPx(bottom);
     newCanvas.style.zIndex = `1`;
 
     const ctx = canvas.getContext('2d');
@@ -200,9 +202,8 @@ export function paintApp({ canvas }: PaintAppProps) {
 
     if (ctx && tempCtx) {
       ctx.scale(scale, scale);
-      ctx.lineWidth = scale * 2;
-      tempCtx.scale(scale, scale);
-      tempCtx.lineWidth = scale * 2;
+      ctx.lineWidth = 2;
+      tempCtx.lineWidth = 2;
     }
 
     if (canvas.parentElement) {
