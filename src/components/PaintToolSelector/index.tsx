@@ -1,0 +1,1 @@
+export { PaintToolSelector } from './PaintToolSelector';

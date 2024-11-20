@@ -1,0 +1,17 @@
+.paintToolSelector {
+  display: grid;
+  gap: 24px;
+}
+
+.btn {
+  width: 100%;
+}
+
+.btn[aria-selected='true'] {
+  background-color: blue;
+  color: white;
+}
+
+.input {
+  width: 100%;
+}

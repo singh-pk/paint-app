@@ -1,0 +1,1 @@
+export { PaintAppContainer } from './PaintAppContainer';
