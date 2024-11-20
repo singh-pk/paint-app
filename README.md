@@ -1,5 +1,9 @@
 # Paint App
 
+### Preview
+
+- [Link to site](https://paint-app-dun.vercel.app/)
+
 ### Setup Instructions for running the application
 
 `You are required to have npm version 18 to run this application`
@@ -14,6 +18,7 @@ pnpm dev
 - Made a vanilla.js paint app under the directory src/paint-app [This can be looked as an hosted npm library]
 - Wrote a container wrapper for paint-app in React, and also exposed required context, so that multiple versions instances of paint-app can coexist without collision in state
 - Used the exposed React version for rendering and triggering updates on the paint-app
+- Optimized canvas draw calls, using multi-layer canvas in paint-app
 
 ### Screen recording
 
